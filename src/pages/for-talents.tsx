@@ -1,0 +1,116 @@
+import { NextSeo } from 'next-seo';
+import Page from '@/components/page';
+import Footer from '@/components/footer';
+import { tw } from 'twind';
+import Button from '@/components/button';
+
+export default function ForTalents() {
+  const benefits = [
+    {
+      title: 'Global Opportunities',
+      description: 'Connect with leading international companies and work on exciting projects from anywhere.',
+      icon: '🌍',
+    },
+    {
+      title: 'Fair Compensation',
+      description: 'Get competitive rates that reflect your skills and experience, with timely payments guaranteed.',
+      icon: '💰',
+    },
+    {
+      title: 'Professional Growth',
+      description: 'Work with diverse teams, learn new technologies, and advance your career with global companies.',
+      icon: '📈',
+    },
+    {
+      title: 'Support & Guidance',
+      description: 'Our team provides ongoing support, helps with contracts, and ensures smooth working relationships.',
+      icon: '🤝',
+    },
+    {
+      title: 'Work-Life Balance',
+      description: 'Enjoy the flexibility of remote work while building your career with international companies.',
+      icon: '⚖️',
+    },
+    {
+      title: 'Verified Opportunities',
+      description: 'All opportunities are verified. Work with legitimate companies on meaningful projects.',
+      icon: '✅',
+    },
+  ];
+
+  return (
+    <Page>
+      <NextSeo title="For Talents - Find Global Opportunities" description="Nepali professionals, discover exciting global opportunities. Connect with international companies and advance your career." />
+      <div className={tw(`bg-white`)}>
+        <div className={tw(`max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8`)}>
+          <div className={tw(`text-center mb-16`)}>
+            <h1 className={tw(`text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4`)}>
+              For Talents
+            </h1>
+            <p className={tw(`text-xl text-gray-600 max-w-3xl mx-auto`)}>
+              Nepali professionals, connect with global opportunities and advance your career
+            </p>
+          </div>
+
+          <div className={tw(`max-w-4xl mx-auto mb-16`)}>
+            <div className={tw(`prose prose-lg mx-auto`)}>
+              <p className={tw(`text-gray-600 mb-6 text-lg`)}>
+                Are you a skilled professional looking for exciting global opportunities? Join our talent network and
+                connect with leading international companies looking for your expertise.
+              </p>
+              <p className={tw(`text-gray-600 text-lg`)}>
+                We help Nepali professionals find rewarding remote work opportunities with companies around the world.
+                Whether you're a developer, designer, marketer, or business professional, we can help match you with
+                the right opportunity.
+              </p>
+            </div>
+          </div>
+
+          <div className={tw(`grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16`)}>
+            {benefits.map((benefit, index) => (
+              <div key={index} className={tw(`bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow`)}>
+                <div className={tw(`text-4xl mb-4`)}>{benefit.icon}</div>
+                <h3 className={tw(`text-xl font-bold text-gray-900 mb-2`)}>{benefit.title}</h3>
+                <p className={tw(`text-gray-600`)}>{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className={tw(`bg-gray-50 rounded-lg p-8 mb-8`)}>
+            <h2 className={tw(`text-2xl font-bold text-gray-900 mb-6 text-center`)}>How It Works</h2>
+            <div className={tw(`grid md:grid-cols-3 gap-8`)}>
+              <div className={tw(`text-center`)}>
+                <div className={tw(`w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4`)}>
+                  1
+                </div>
+                <h3 className={tw(`text-lg font-bold text-gray-900 mb-2`)}>Register</h3>
+                <p className={tw(`text-gray-600`)}>Create your profile and showcase your skills and experience</p>
+              </div>
+              <div className={tw(`text-center`)}>
+                <div className={tw(`w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4`)}>
+                  2
+                </div>
+                <h3 className={tw(`text-lg font-bold text-gray-900 mb-2`)}>Get Matched</h3>
+                <p className={tw(`text-gray-600`)}>We match you with opportunities that fit your skills and interests</p>
+              </div>
+              <div className={tw(`text-center`)}>
+                <div className={tw(`w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4`)}>
+                  3
+                </div>
+                <h3 className={tw(`text-lg font-bold text-gray-900 mb-2`)}>Start Working</h3>
+                <p className={tw(`text-gray-600`)}>Begin your journey with a global company and grow your career</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={tw(`bg-indigo-50 rounded-lg p-8 text-center`)}>
+            <h2 className={tw(`text-2xl font-bold text-gray-900 mb-4`)}>Ready to Join Our Talent Network?</h2>
+            <p className={tw(`text-gray-600 mb-6`)}>Register today and start connecting with global opportunities</p>
+            <Button primary>Register as Talent</Button>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </Page>
+  );
+}
