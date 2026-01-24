@@ -94,24 +94,31 @@ const Navigation = () => {
   const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <nav 
-      className={tw(`transition-all duration-300 z-50`)}
-      style={{
-        position: isHomepage ? 'absolute' : 'sticky',
-        top: isHomepage ? 0 : 'auto',
-        left: isHomepage ? 0 : 'auto',
-        right: isHomepage ? 0 : 'auto',
-        backgroundColor: isHomepage ? 'transparent' : '#ffffff',
-        zIndex: isHomepage ? 1000 : 100,
-        boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
-      }}
-    >
+    <nav
+  className={tw(`transition-all duration-300 z-50`)}
+  style={{
+    position: isHomepage ? 'absolute' : 'sticky',
+    top: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: isHomepage ? 'transparent' : '#ffffff',
+    zIndex: 1000,
+    boxShadow: isHomepage
+      ? 'none'
+      : '0 2px 10px rgba(0,0,0,0.08)',
+  }}
+>
+
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
               <a href="/">
-                <img className={tw(`h-12 `)} src="logo.png" alt="logo" width={140} height={48} />
+                <img className={tw(`h-12 `)} src={isHomepage ? "logo-light.png": "logo.png" } alt="Nebica Hiring agency in nepal" width={140} height={48} style={{
+    filter: isHomepage
+      ? 'drop-shadow(10px 12px 18px rgba(252, 252, 252,4))'
+      : 'none',
+  }}/>
               </a>
             </div>
             <div className={tw(`hidden md:block`)}>

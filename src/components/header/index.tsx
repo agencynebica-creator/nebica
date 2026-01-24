@@ -64,7 +64,7 @@ const Header = () => (
           <button 
             className={tw(`px-8 py-4 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white border-opacity-30 text-white text-lg font-semibold rounded-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`)}
           >
-            Get a Quote
+            Let's Connect
           </button>
         </a>
       </div>
