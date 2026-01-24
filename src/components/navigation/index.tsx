@@ -1,5 +1,4 @@
-import { tw } from 'twind';
-import { useState } from 'react';
+ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Button from '@/components/button';
 
@@ -51,18 +50,18 @@ const secondaryLinks = [
 
 const MobileMenu = ({ isHomepage }: { isHomepage: boolean }) => (
   <div 
-    className={tw(`md:hidden`)}
+     className="md:hidden"
     style={{
       backgroundColor: isHomepage ? 'rgba(0, 0, 0, 0.7)' : '#ffffff',
       backdropFilter: isHomepage ? 'blur(10px)' : 'none',
       borderRadius: '0 0 0.5rem 0.5rem',
     }}
   >
-    <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
+    <div  className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       {links.map((link: Link) => (
         <a 
           href={link.href} 
-          className={tw(`block px-3 py-2 text-base font-medium transition-colors`)} 
+           className="block px-3 py-2 text-base font-medium transition-colors" 
           style={{ color: isHomepage ? '#ffffff' : '#6b7280' }}
           key={link.label}
         >
@@ -70,13 +69,13 @@ const MobileMenu = ({ isHomepage }: { isHomepage: boolean }) => (
         </a>
       ))}
     </div>
-    <div className={tw(`pt-4 pb-3`)} style={{ borderTop: `1px solid ${isHomepage ? 'rgba(255, 255, 255, 0.2)' : '#e5e7eb'}` }}>
-      <div className={tw(`px-2 space-y-1`)}>
+    <div  className="pt-4 pb-3" style={{ borderTop: `1px solid ${isHomepage ? 'rgba(255, 255, 255, 0.2)' : '#e5e7eb'}` }}>
+      <div  className="px-2 space-y-1">
         {secondaryLinks.map((link: Link) => (
           <a
             key={`mobile-${link.label}`}
             href={link.href}
-            className={tw(`block px-3 py-2 text-base font-medium transition-colors`)}
+             className="block px-3 py-2 text-base font-medium transition-colors"
             style={{ color: isHomepage ? '#ffffff' : '#6b7280' }}
           >
             {link.label}
@@ -95,7 +94,7 @@ const Navigation = () => {
 
   return (
     <nav
-  className={tw(`transition-all duration-300 z-50`)}
+   className="transition-all duration-300 z-50"
   style={{
     position: isHomepage ? 'absolute' : 'sticky',
     top: 0,
@@ -109,25 +108,25 @@ const Navigation = () => {
   }}
 >
 
-      <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
-        <div className={tw(`flex items-center justify-between h-24`)}>
-          <div className={tw(`flex items-center`)}>
-            <div className={tw(`flex-shrink-0`)}>
+      <div  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div  className="flex items-center justify-between h-24">
+          <div  className="flex items-center">
+            <div  className="flex-shrink-0">
               <a href="/">
-                <img className={tw(`h-12 `)} src={isHomepage ? "logo-light.png": "logo.png" } alt="Nebica Hiring agency in nepal" width={140} height={48} style={{
+                <img  className="h-12 " src={isHomepage ? "logo-light.png": "logo.png" } alt="Nebica Hiring agency in nepal" width={140} height={48} style={{
     filter: isHomepage
       ? 'drop-shadow(10px 12px 18px rgba(252, 252, 252,4))'
       : 'none',
   }}/>
               </a>
             </div>
-            <div className={tw(`hidden md:block`)}>
-              <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
+            <div  className="hidden md:block">
+              <div  className="ml-10 flex items-baseline space-x-4">
                 {links.map((link: Link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className={tw(`px-3 py-2 rounded-md font-medium transition-colors`)}
+                     className="px-3 py-2 rounded-md font-medium transition-colors"
                     style={{
                       color: isHomepage ? '#ffffff' : '#6b7280',
                     }}
@@ -148,11 +147,11 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <div className={tw(`hidden md:block`)}>
-            <div className={tw(`ml-4 flex items-center md:ml-6`)}>
+          <div  className="hidden md:block">
+            <div  className="ml-4 flex items-center md:ml-6">
               <a href="/resources">
                 <button 
-                  className={tw(`border-0 mr-2 px-4 py-2 rounded transition-colors`)}
+                   className="border-0 mr-2 px-4 py-2 rounded transition-colors"
                   style={{
                     backgroundColor: isHomepage ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
                     color: isHomepage ? '#ffffff' : '#4b5563',
@@ -174,7 +173,7 @@ const Navigation = () => {
               </a>
               {/* <a href="/resources">
                 <button 
-                  className={tw(`border-0 mr-2 px-4 py-2 rounded transition-colors`)}
+                   className="border-0 mr-2 px-4 py-2 rounded transition-colors"
                   style={{
                     backgroundColor: isHomepage ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
                     color: isHomepage ? '#ffffff' : '#4b5563',
@@ -196,7 +195,7 @@ const Navigation = () => {
               </a> */}
               <a href="/contact">
                 <button 
-                  className={tw(`px-4 py-2 rounded font-medium transition-all`)}
+                   className="px-4 py-2 rounded font-medium transition-all"
                   style={{
                     backgroundColor: isHomepage ? '#ffffff' : '#4f46e5',
                     color: isHomepage ? '#4f46e5' : '#ffffff',
@@ -221,21 +220,21 @@ const Navigation = () => {
               </a>
             </div>
           </div>
-          <div className={tw(`-mr-2 flex md:hidden`)}>
+          <div  className="-mr-2 flex md:hidden">
             <button
               type="button"
               aria-controls="mobile-menu"
               aria-expanded={showMenu}
               onClick={toggleMenu}
-              className={tw(`p-2 transition-colors`)}
+               className="p-2 transition-colors"
               style={{
                 color: isHomepage ? '#ffffff' : '#9ca3af',
               }}
             >
-              <span className={tw(`sr-only`)}>Open menu</span>
+              <span  className="sr-only">Open menu</span>
               {showMenu ? (
                 <svg
-                  className={tw(`h-6 w-6`)}
+                   className="h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -248,7 +247,7 @@ const Navigation = () => {
                 </svg>
               ) : (
                 <svg
-                  className={tw(`h-6 w-6`)}
+                   className="h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

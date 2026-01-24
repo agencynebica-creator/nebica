@@ -1,8 +1,15 @@
-import { NextSeo } from 'next-seo';
 import Page from '@/components/page';
 import Footer from '@/components/footer';
-import { tw } from 'twind';
-import { useState } from 'react';
+ import { useState } from 'react';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title:"FAQs - Frequently Asked Questions",
+  description:"Find answers to common questions about hiring remote talent from Nepal, our process, pricing, and support."
+
+}
+ 
+
 
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -52,28 +59,27 @@ export default function FAQs() {
 
   return (
     <Page>
-      <NextSeo title="FAQs - Frequently Asked Questions" description="Find answers to common questions about hiring remote talent from Nepal, our process, pricing, and support." />
-      <div className={tw(`bg-white`)}>
-        <div className={tw(`max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8`)}>
-          <div className={tw(`text-center mb-16`)}>
-            <h1 className={tw(`text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4`)}>
+      <div  className="bg-white">
+        <div  className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div  className="text-center mb-16">
+            <h1  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h1>
-            <p className={tw(`text-xl text-gray-600 max-w-3xl mx-auto`)}>
+            <p  className="text-xl text-gray-600 max-w-3xl mx-auto">
               Find answers to the most common questions about our services and process
             </p>
           </div>
 
-          <div className={tw(`space-y-4 mb-16`)}>
+          <div  className="space-y-4 mb-16">
             {faqs.map((faq, index) => (
-              <div key={index} className={tw(`border border-gray-200 rounded-lg overflow-hidden`)}>
+              <div key={index}  className="border border-gray-200 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className={tw(`w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors`)}
+                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
-                  <span className={tw(`font-semibold text-gray-900`)}>{faq.question}</span>
+                  <span  className="font-semibold text-gray-900">{faq.question}</span>
                   <svg
-                    className={tw(`w-5 h-5 text-gray-500 transform transition-transform ${openIndex === index ? 'rotate-180' : ''}`)}
+                     className="w-5 h-5 text-gray-500 transform transition-transform ${openIndex === index ? 'rotate-180' : ''}"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -82,18 +88,18 @@ export default function FAQs() {
                   </svg>
                 </button>
                 {openIndex === index && (
-                  <div className={tw(`px-6 py-4 bg-gray-50 border-t border-gray-200`)}>
-                    <p className={tw(`text-gray-600`)}>{faq.answer}</p>
+                  <div  className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                    <p  className="text-gray-600">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          <div className={tw(`bg-indigo-50 rounded-lg p-8 text-center`)}>
-            <h2 className={tw(`text-2xl font-bold text-gray-900 mb-4`)}>Still have questions?</h2>
-            <p className={tw(`text-gray-600 mb-6`)}>Our team is here to help. Get in touch and we'll answer any questions you have.</p>
-            <a href="/contact" className={tw(`inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors`)}>
+          <div  className="bg-indigo-50 rounded-lg p-8 text-center">
+            <h2  className="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h2>
+            <p  className="text-gray-600 mb-6">Our team is here to help. Get in touch and we'll answer any questions you have.</p>
+            <a href="/contact"  className="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
               Contact Us
             </a>
           </div>

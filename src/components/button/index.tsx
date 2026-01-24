@@ -1,4 +1,3 @@
-import { tw } from 'twind';
 import React from 'react';
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,7 +21,7 @@ const Button = ({
     <button
       type="button"
       onClick={onClick}
-      className={tw(`${baseStyle} ${styles} ${modifier ?? ``}`)}
+      className={`${baseStyle} ${styles} ${modifier ?? ``}`}
       {...rest}
     >
       {children}

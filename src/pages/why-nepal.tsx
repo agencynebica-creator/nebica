@@ -1,9 +1,13 @@
-import { NextSeo } from 'next-seo';
 import Page from '@/components/page';
 import Footer from '@/components/footer';
-import { tw } from 'twind';
-import Button from '@/components/button';
+ import Button from '@/components/button';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title:"Why Nepal - Benefits of Hiring Nepali Talent" ,
+  description:"Discover why Nepal is becoming a top destination for remote talent. Highly educated, English-proficient professionals ready to contribute."
 
+}
 export default function WhyNepal() {
   const reasons = [
     {
@@ -57,21 +61,20 @@ export default function WhyNepal() {
 
   return (
     <Page>
-      <NextSeo title="Why Nepal - Benefits of Hiring Nepali Talent" description="Discover why Nepal is becoming a top destination for remote talent. Highly educated, English-proficient professionals ready to contribute." />
-      <div className={tw(`bg-white`)}>
-        <div className={tw(`max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8`)}>
-          <div className={tw(`text-center mb-16`)}>
-            <h1 className={tw(`text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4`)}>
+      <div  className="bg-white">
+        <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div  className="text-center mb-16">
+            <h1  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
               Why Nepal?
             </h1>
-            <p className={tw(`text-xl text-gray-600 max-w-3xl mx-auto`)}>
+            <p  className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover why Nepal is emerging as a premier destination for global remote talent
             </p>
           </div>
 
-          <div className={tw(`max-w-4xl mx-auto mb-16`)}>
-            <div className={tw(`prose prose-lg mx-auto`)}>
-              <p className={tw(`text-gray-600 mb-6 text-lg`)}>
+          <div  className="max-w-4xl mx-auto mb-16">
+            <div  className="prose prose-lg mx-auto">
+              <p  className="text-gray-600 mb-6 text-lg">
                 Nepal is home to a vibrant, educated, and rapidly growing workforce of talented professionals ready to
                 contribute to global businesses. With strong English proficiency, excellent technical skills, and a
                 commitment to quality, Nepali talent offers exceptional value for companies looking to build remote teams.
@@ -79,28 +82,28 @@ export default function WhyNepal() {
             </div>
           </div>
 
-          <div className={tw(`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16`)}>
+          <div  className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className={tw(`text-center bg-indigo-50 rounded-lg p-6`)}>
-                <div className={tw(`text-3xl font-bold text-indigo-600 mb-2`)}>{stat.value}</div>
-                <div className={tw(`text-gray-600`)}>{stat.label}</div>
+              <div key={index}  className="text-center bg-indigo-50 rounded-lg p-6">
+                <div  className="text-3xl font-bold text-indigo-600 mb-2">{stat.value}</div>
+                <div  className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          <div className={tw(`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16`)}>
+          <div  className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {reasons.map((reason, index) => (
-              <div key={index} className={tw(`bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow`)}>
-                <div className={tw(`text-4xl mb-4`)}>{reason.icon}</div>
-                <h3 className={tw(`text-xl font-bold text-gray-900 mb-2`)}>{reason.title}</h3>
-                <p className={tw(`text-gray-600`)}>{reason.description}</p>
+              <div key={index}  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div  className="text-4xl mb-4">{reason.icon}</div>
+                <h3  className="text-xl font-bold text-gray-900 mb-2">{reason.title}</h3>
+                <p  className="text-gray-600">{reason.description}</p>
               </div>
             ))}
           </div>
 
-          <div className={tw(`bg-indigo-50 rounded-lg p-8 text-center`)}>
-            <h2 className={tw(`text-2xl font-bold text-gray-900 mb-4`)}>Ready to Tap into Nepal's Talent?</h2>
-            <p className={tw(`text-gray-600 mb-6`)}>Join hundreds of companies already benefiting from exceptional Nepali professionals</p>
+          <div  className="bg-indigo-50 rounded-lg p-8 text-center">
+            <h2  className="text-2xl font-bold text-gray-900 mb-4">Ready to Tap into Nepal's Talent?</h2>
+            <p  className="text-gray-600 mb-6">Join hundreds of companies already benefiting from exceptional Nepali professionals</p>
             <Button primary>Start Hiring Today</Button>
           </div>
         </div>

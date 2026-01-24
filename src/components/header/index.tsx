@@ -1,7 +1,7 @@
-import { tw, css } from 'twind/css';
+
 import Button from '@/components/button';
 
-const headerStyle = css`
+const headerStyle = `
   background: linear-gradient(135deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%),
               url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
   background-size: cover;
@@ -32,9 +32,9 @@ const headerStyle = css`
 `;
 
 const Header = () => (
-  <header className={tw(headerStyle)}>
-    <div className={tw(`max-w-4xl mx-auto py-16 px-14 mt-10 sm:px-6 lg:px-8 relative z-10`)}>
-      <h1 className={tw(`font-sans font-bold text-4xl md:text-4xl lg:text-6xl text-center leading-tight relative z-10`)} style={{ 
+  <header className={headerStyle}>
+    <div  className="max-w-4xl mx-auto py-16 px-14 mt-10 sm:px-6 lg:px-8 relative z-10">
+      <h1  className="font-sans font-bold text-4xl md:text-4xl lg:text-6xl text-center leading-tight relative z-10" style={{ 
         color: '#ffffff',
         textShadow: '0 4px 30px rgba(0, 0, 0, 0.6), 0 2px 15px rgba(0, 0, 0, 0.4)',
         letterSpacing: '-0.03em',
@@ -42,8 +42,8 @@ const Header = () => (
       }}>
       Hire Verified  Talent
       </h1>
-      <div className={tw(`max-w-2xl mx-auto relative z-10 mt-8`)}>
-        <p className={tw(`text-center text-lg md:text-xl lg:text-2xl font-normal`)} style={{ 
+      <div  className="max-w-2xl mx-auto relative z-10 mt-8">
+        <p  className="text-center text-lg md:text-xl lg:text-2xl font-normal" style={{ 
           color: '#e2e8f0',
           textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
           lineHeight: '1.6',
@@ -51,18 +51,18 @@ const Header = () => (
         Access top-tier Nepali professionals ready to elevate your team. Verified, skilled, globally competitive talent with instant replacement guarantee.
         </p>
       </div>
-      <div className={tw(`mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 w-full mx-auto relative z-10`)}>
-        <a href="/contact" className={tw(`inline-block`)}>
+      <div  className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 w-full mx-auto relative z-10">
+        <a href="/contact"  className="inline-block">
           <button 
-            className={tw(`px-8 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105`)}
+             className="px-8 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Start Hiring
           </button>
         </a>
-        <span className={tw(`text-white text-opacity-80 hidden sm:inline`)} style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>or</span>
-        <a href="/contact" className={tw(`inline-block`)}>
+        <span  className="text-white text-opacity-80 hidden sm:inline" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>or</span>
+        <a href="/contact"  className="inline-block">
           <button 
-            className={tw(`px-8 py-4 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white border-opacity-30 text-white text-lg font-semibold rounded-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`)}
+             className="px-8 py-4 bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white border-opacity-30 text-white text-lg font-semibold rounded-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             Let's Connect
           </button>

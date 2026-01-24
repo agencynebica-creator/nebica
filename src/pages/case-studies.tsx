@@ -1,8 +1,14 @@
-import { NextSeo } from 'next-seo';
 import Page from '@/components/page';
 import Footer from '@/components/footer';
-import { tw } from 'twind';
-import Button from '@/components/button';
+ import Button from '@/components/button';
+
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+
+  title:"Case Studies – Remote Hiring Success & Lessons",
+        description:"Explore real-world case studies on remote hiring risks, their consequences, and how managed staffing solutions resolve them."
+     }
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -46,48 +52,45 @@ export default function CaseStudies() {
 
   return (
     <Page>
-      <NextSeo
-        title="Case Studies – Remote Hiring Success & Lessons"
-        description="Explore real-world case studies on remote hiring risks, their consequences, and how managed staffing solutions resolve them."
-      />
+    
 
-      <div className={tw(`bg-white`)}>
-        <div className={tw(`max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8`)}>
+      <div  className="bg-white">
+        <div  className="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           
           {/* Page Header */}
-          <div className={tw(`text-center mb-16`)}>
-            <h1 className={tw(`text-4xl md:text-5xl font-bold text-gray-900 mb-6`)}>
+          <div  className="text-center mb-16">
+            <h1  className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Case Studies: Remote Hiring Challenges & Solutions
             </h1>
-            <p className={tw(`text-xl text-gray-600 max-w-3xl mx-auto`)}>
+            <p  className="text-xl text-gray-600 max-w-3xl mx-auto">
               Learn from real remote hiring scenarios — the problems, consequences, and how structured staffing solves them.
             </p>
           </div>
 
           {/* Case Study List */}
-          <div className={tw(`space-y-20`)}>
+          <div  className="space-y-20">
             {caseStudies.map((study, index) => (
               <article
                 key={index}
-                className={tw(`border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow`)}
+                 className="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
               >
-                <h2 className={tw(`text-2xl md:text-3xl font-bold text-gray-900 mb-6`)}>
+                <h2  className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                   {study.title}
                 </h2>
 
-                <div className={tw(`space-y-4 text-lg text-gray-700`)}>
+                <div  className="space-y-4 text-lg text-gray-700">
                   <p>
-                    <strong className={tw(`text-gray-900`)}>Problem: </strong>
+                    <strong  className="text-gray-900">Problem: </strong>
                     {study.problem}
                   </p>
 
                   <p>
-                    <strong className={tw(`text-gray-900`)}>Consequences: </strong>
+                    <strong  className="text-gray-900">Consequences: </strong>
                     {study.consequences}
                   </p>
 
                   <p>
-                    <strong className={tw(`text-gray-900`)}>Solution: </strong>
+                    <strong  className="text-gray-900">Solution: </strong>
                     {study.solution}
                   </p>
                 </div>
@@ -96,11 +99,11 @@ export default function CaseStudies() {
           </div>
 
           {/* CTA Section */}
-          {/* <div className={tw(`bg-indigo-50 rounded-lg p-8 text-center mt-20`)}>
-            <h2 className={tw(`text-2xl font-bold text-gray-900 mb-4`)}>
+          {/* <div  className="bg-indigo-50 rounded-lg p-8 text-center mt-20">
+            <h2  className="text-2xl font-bold text-gray-900 mb-4">
               Build Your Own Success Story
             </h2>
-            <p className={tw(`text-gray-600 mb-6`)}>
+            <p  className="text-gray-600 mb-6">
               Partner with us for fully managed remote employees — verified, accountable, and dedicated to your company’s success.
             </p>
             <Button primary>Talk to Our Team</Button>
