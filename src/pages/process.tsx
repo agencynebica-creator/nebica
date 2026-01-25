@@ -1,8 +1,13 @@
-import { NextSeo } from 'next-seo';
 import Page from '@/components/page';
 import Footer from '@/components/footer';
-import { tw } from 'twind';
-import Button from '@/components/button';
+ import Button from '@/components/button';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title:"Our Process - Simple 6-Step Hiring Process" ,
+  description:"Our streamlined 6-step process takes you from initial consultation to successful placement in under 2 weeks." 
+
+}
 
 export default function Process() {
   const steps = [
@@ -46,39 +51,38 @@ export default function Process() {
 
   return (
     <Page>
-      <NextSeo title="Our Process - Simple 6-Step Hiring Process" description="Our streamlined 6-step process takes you from initial consultation to successful placement in under 2 weeks." />
-      <div className={tw(`bg-white`)}>
-        <div className={tw(`max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8`)}>
-          <div className={tw(`text-center mb-16`)}>
-            <h1 className={tw(`text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4`)}>
+      <div  className="bg-white">
+        <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div  className="text-center mb-16">
+            <h1  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
               Our Hiring Process
             </h1>
-            <p className={tw(`text-xl text-gray-600 max-w-3xl mx-auto`)}>
+            <p  className="text-xl text-gray-600 max-w-3xl mx-auto">
               A simple, streamlined process that gets you the right talent in under 2 weeks
             </p>
           </div>
 
-          <div className={tw(`relative`)}>
+          <div  className="relative">
             {/* Timeline line */}
-            <div className={tw(`absolute left-8 top-0 bottom-0 w-0.5 bg-indigo-200 hidden md:block`)}></div>
+            <div  className="absolute left-8 top-0 bottom-0 w-0.5 bg-indigo-200 hidden md:block"></div>
 
-            <div className={tw(`space-y-12`)}>
+            <div  className="space-y-12">
               {steps.map((step, index) => (
-                <div key={index} className={tw(`relative flex items-start`)}>
-                  <div className={tw(`flex-shrink-0 relative z-10`)}>
-                    <div className={tw(`w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl`)}>
+                <div key={index}  className="relative flex items-start">
+                  <div  className="flex-shrink-0 relative z-10">
+                    <div  className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                       {step.number}
                     </div>
                   </div>
-                  <div className={tw(`ml-8 flex-1`)}>
-                    <div className={tw(`bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow`)}>
-                      <div className={tw(`flex items-center justify-between mb-2`)}>
-                        <h3 className={tw(`text-xl font-bold text-gray-900`)}>{step.title}</h3>
-                        <span className={tw(`px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm`)}>
+                  <div  className="ml-8 flex-1">
+                    <div  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                      <div  className="flex items-center justify-between mb-2">
+                        <h3  className="text-xl font-bold text-gray-900">{step.title}</h3>
+                        <span  className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">
                           {step.duration}
                         </span>
                       </div>
-                      <p className={tw(`text-gray-600`)}>{step.description}</p>
+                      <p  className="text-gray-600">{step.description}</p>
                     </div>
                   </div>
                 </div>
@@ -86,9 +90,9 @@ export default function Process() {
             </div>
           </div>
 
-          <div className={tw(`mt-16 bg-indigo-50 rounded-lg p-8 text-center`)}>
-            <h2 className={tw(`text-2xl font-bold text-gray-900 mb-4`)}>Total Time: Under 2 Weeks</h2>
-            <p className={tw(`text-gray-600 mb-6`)}>From initial consultation to having your new team member onboarded and productive</p>
+          <div  className="mt-16 bg-indigo-50 rounded-lg p-8 text-center">
+            <h2  className="text-2xl font-bold text-gray-900 mb-4">Total Time: Under 2 Weeks</h2>
+            <p  className="text-gray-600 mb-6">From initial consultation to having your new team member onboarded and productive</p>
             <Button primary>Start Your Hiring Process</Button>
           </div>
         </div>
