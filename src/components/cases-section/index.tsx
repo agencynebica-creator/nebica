@@ -1,13 +1,17 @@
+'use client'
+
 import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
+import type { Engine } from 'tsparticles-engine';
 import { loadFull } from 'tsparticles';
-import Arrow from '@/constants/svg/arrow.svg';
+import Arrow from '@/constants/svg/arrow.svg'
+
 
 // Particle background component
 const ParticleBg = () => {
-  const particlesInit = useCallback(async (engine) => {
-    // load all tsparticles features
-    await loadFull(engine);
+  const particlesInit = useCallback(async (engine: Engine) => {
+    // Only load plugins if you need them
+    // await loadFull(engine); // <-- optional, comment out if causing errors
   }, []);
 
   return (
@@ -41,15 +45,15 @@ const ParticleBg = () => {
           },
         },
         interactivity: {
-          events: {
-            onClick: { enable: false }, // renamed from onclick
-          },
+          events: { onClick: { enable: false } },
         },
-        retina_detect: true,
+        detectRetina: true,
       }}
     />
   );
 };
+
+
 
 const articles = [
   {
