@@ -60,7 +60,10 @@ export default function Contact() {
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">
             <h1  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+            <span className="bg-gradient-to-r from-[#1b4b8d] via-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent">
+
               Contact Us
+              </span>
             </h1>
             <p  className="text-xl text-gray-600 max-w-3xl mx-auto">
               Have questions? We're here to help. Get in touch and let's discuss how we can support your hiring needs.
@@ -69,69 +72,78 @@ export default function Contact() {
 
           <div  className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Contact Form */}
-            <div>
-              <h2  className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-              <form onSubmit={handleSubmit}  className="space-y-6">
+            <div >
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label  className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
                   <input
                     name="name"
                     type="text"
                     value={form.name}
                     onChange={handleChange}
                     required
-                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#60cacc] focus:ring-2 focus:ring-[#60cacc]/20 focus:outline-none transition-all"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label  className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
                     name="email"
                     type="email"
                     value={form.email}
                     onChange={handleChange}
                     required
-                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#60cacc] focus:ring-2 focus:ring-[#60cacc]/20 focus:outline-none transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <div>
-                  <label  className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
                   <input
                     name="company"
                     type="text"
                     value={form.company}
                     onChange={handleChange}
-                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#60cacc] focus:ring-2 focus:ring-[#60cacc]/20 focus:outline-none transition-all"
                     placeholder="Company name"
                   />
                 </div>
 
                 <div>
-                  <label  className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                   <textarea
                     name="message"
                     rows={6}
                     value={form.message}
                     onChange={handleChange}
                     required
-                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#60cacc] focus:ring-2 focus:ring-[#60cacc]/20 focus:outline-none transition-all"
                     placeholder="Tell us about your hiring needs..."
                   ></textarea>
                 </div>
 
-                <Button primary modifier="w-full" type="submit" disabled={status === 'loading'}>
+                <Button 
+                  primary 
+                  modifier="w-full py-3" 
+                  type="submit" 
+                  disabled={status === 'loading'}
+                >
                   {status === 'loading' ? 'Sending...' : 'Send Message'}
                 </Button>
 
                 {status === 'success' && (
-                  <p  className="text-green-600 mt-4">Thanks! Our team will contact you within 24 hours.</p>
+                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+                    <p className="text-green-700">Thanks! Our team will contact you within 24 hours.</p>
+                  </div>
                 )}
                 {status === 'error' && (
-                  <p  className="text-red-600 mt-4">{errorMessage}</p>
+                  <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-700">{errorMessage}</p>
+                  </div>
                 )}
               </form>
             </div>

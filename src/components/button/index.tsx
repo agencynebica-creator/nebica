@@ -12,10 +12,10 @@ const Button = ({
   onClick,
   ...rest
 }: IButton) => {
-  const baseStyle = `font-sans font-medium py-2 px-4 border rounded transition-colors`;
+  const baseStyle = `font-sans font-medium py-2 px-4 border rounded-lg transition-all duration-200`;
   const styles = primary
-    ? `bg-indigo-600 text-white border-indigo-500 hover:bg-indigo-700`
-    : `bg-white text-gray-600 border-gray-300 hover:bg-gray-100`;
+    ? `bg-[#1b4b8d] text-white border-[#1b4b8d] hover:bg-[#1b4b8d]/90 hover:shadow-md`
+    : `bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-[#60cacc]/40`;
 
   return (
     <button
