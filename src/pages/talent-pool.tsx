@@ -53,9 +53,9 @@ export default function TalentPool() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse our verified pool of exceptional 
-              <span className="text-[#1b4b8d] font-semibold"> Nepali professionals </span>
-              ready to join your team
+              we have veterans  
+              <span className="text-[#1b4b8d] font-semibold"> Nepalese professionals </span>
+               of these talent pool categories ready to join your team
             </p>
           </div>
 
