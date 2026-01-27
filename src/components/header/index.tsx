@@ -70,7 +70,7 @@ const Header = () => (
           <div className="text-sm md:text-base text-[#60cacc]">Satisfaction Rate</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl md:text-4xl font-bold text-white">24h</div>
+          <div className="text-3xl md:text-4xl font-bold text-white">7 Days</div>
           <div className="text-sm md:text-base text-[#60cacc]">Replacement Guarantee</div>
         </div>
       </div>
