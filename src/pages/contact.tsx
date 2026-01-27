@@ -155,7 +155,7 @@ export default function Contact() {
                 <div>
                   <h3  className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                   <p  className="text-gray-600">contact@nebica.com</p>
-                  <p  className="text-gray-600">hire@nebica.com</p>
+                  <p  className="text-gray-600">support@nebica.com</p>
                 </div>
                 <div>
                   <h3  className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
