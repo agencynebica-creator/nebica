@@ -2,14 +2,9 @@ import { useState } from 'react';
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
+import SeoHead from '@/components/seohead';
 
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
 
-  title:"Contact Us - Get in Touch",
-  description:"Get in touch with us to discuss your hiring needs or request a custom quote."
-}
  
 
 export default function Contact() {
@@ -56,7 +51,10 @@ export default function Contact() {
   };
 
   return (
-    <Page>
+    <Page head={ 
+      <SeoHead title="Contact Us - Get in Touch"
+        description ="Get in touch with us to discuss your hiring needs or request a custom quote."
+      />}>
   
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">

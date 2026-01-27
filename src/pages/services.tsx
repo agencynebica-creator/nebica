@@ -1,14 +1,10 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
+import SeoHead from '@/components/seohead';
 
-import type { Metadata } from 'next'
  
-export const metadata: Metadata = {
-  title:"Our Services - Complete Hiring Solutions",
-   description:"Comprehensive services from talent sourcing to ongoing management. We handle everything so you can focus on your business." 
 
-}
 export default function Services() {
   const services = [
     {
@@ -54,7 +50,10 @@ export default function Services() {
   ];
 
   return (
-    <Page>
+    <Page head = {<SeoHead
+      title="Our Services - Complete Hiring Solutions"
+       description="Comprehensive services from talent sourcing to ongoing management. We handle everything so you can focus on your business." 
+    />}>
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

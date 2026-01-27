@@ -1,13 +1,9 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
-import type { Metadata } from 'next'
+import SeoHead from '@/components/seohead';
  
-export const metadata: Metadata = {
-  title:"Resources – Remote Hiring Problems, Risks & Solutions",
-  description:"Explore expert-written blogs, guides, and resources covering remote hiring problems, their consequences, and proven solutions."
 
-}
 
 export default function Resources() {
   const resources = [
@@ -70,7 +66,10 @@ export default function Resources() {
   ];
 
   return (
-    <Page>
+    <Page head={<SeoHead
+      title="Resources – Remote Hiring Problems, Risks & Solutions"
+      description="Explore expert-written blogs, guides, and resources covering remote hiring problems, their consequences, and proven solutions."
+    />}>
    
 
       <div  className="bg-white">

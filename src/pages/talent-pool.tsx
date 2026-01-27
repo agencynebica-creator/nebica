@@ -1,13 +1,9 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
-import type { Metadata } from 'next'
+import SeoHead from '@/components/seohead';
  
-export const metadata: Metadata = {
-  title:"Talent Pool - Browse Verified Nepali Professionals",
-   description:"Explore our curated pool of verified Nepali talent across IT, design, business, and more." 
 
-}
 export default function TalentPool() {
   const categories = [
     {
@@ -43,7 +39,10 @@ export default function TalentPool() {
   ];
 
   return (
-    <Page>
+    <Page head={<SeoHead
+      title="Talent Pool - Browse Verified Nepali Professionals"
+       description="Explore our curated pool of verified Nepali talent across IT, design, business, and more." 
+    />}>
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

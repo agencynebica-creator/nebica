@@ -1,13 +1,9 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
-import type { Metadata } from 'next'
+import SeoHead from '@/components/seohead';
  
-export const metadata: Metadata = {
-  title:"For Talents - Find Global Opportunities",
-   description:"Nepali professionals, discover exciting global opportunities. Connect with international companies and advance your career."
 
-}
 
 export default function ForTalents() {
   const benefits = [
@@ -44,7 +40,10 @@ export default function ForTalents() {
   ];
 
   return (
-    <Page>
+    <Page head={<SeoHead
+      title ="For Talents - Find Global Opportunities"
+       description ="Nepali professionals, discover exciting global opportunities. Connect with international companies and advance your career."
+    />}>
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

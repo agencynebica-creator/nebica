@@ -1,13 +1,11 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
-import type { Metadata } from 'next'
+import SeoHead from '@/components/seohead';
  
-export const metadata: Metadata = {
-  title:"Why Nepal - Benefits of Hiring Nepali Talent" ,
-  description:"Discover why Nepal is becoming a top destination for remote talent. Highly educated, English-proficient professionals ready to contribute."
 
-}
+
+
 export default function WhyNepal() {
   const reasons = [
     {
@@ -60,7 +58,9 @@ export default function WhyNepal() {
   ];
 
   return (
-    <Page>
+    <Page head={<SeoHead title="Why Nepal - Benefits of Hiring Nepali Talent" 
+      description="Discover why Nepal is becoming a top destination for remote talent. Highly educated, English-proficient professionals ready to contribute."
+    />} >
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

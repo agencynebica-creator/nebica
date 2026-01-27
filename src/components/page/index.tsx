@@ -3,13 +3,12 @@ import Navigation from '@/components/navigation';
  
 interface IProps {
   children: React.ReactNode;
+  head: React.ReactNode
 }
 
-const Page = ({ children }: IProps) => (
+const Page = ({head , children }: IProps) => (
   <div>
-    <Head>
-      <link rel="icon" href="/icon.png" />
-    </Head>
+   {head}
     <div  className="min-h-screen flex flex-col relative">
       <Navigation />
       {children}

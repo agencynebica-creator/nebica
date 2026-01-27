@@ -1,13 +1,9 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
-import type { Metadata } from 'next'
+import SeoHead from '@/components/seohead';
  
-export const metadata: Metadata = {
-  title:"Our Process - Simple 6-Step Hiring Process" ,
-  description:"Our streamlined 6-step process takes you from initial consultation to successful placement in under 2 weeks." 
 
-}
 
 export default function Process() {
   const steps = [
@@ -50,7 +46,10 @@ export default function Process() {
   ];
 
   return (
-    <Page>
+    <Page head={<SeoHead
+      title="Our Process - Simple 6-Step Hiring Process" 
+      description="Our streamlined 6-step process takes you from initial consultation to successful placement in under 2 weeks." 
+    />}>
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

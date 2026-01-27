@@ -52,7 +52,7 @@ const MobileMenu = ({ isHomepage }: { isHomepage: boolean }) => (
   <div 
      className="md:hidden"
     style={{
-      backgroundColor: isHomepage ? 'rgba(0, 0, 0, 0.7)' : '#ffffff',
+      backgroundColor: isHomepage ? 'transparent' : '#ffffff',
       backdropFilter: isHomepage ? 'blur(10px)' : 'none',
       borderRadius: '0 0 0.5rem 0.5rem',
     }}
