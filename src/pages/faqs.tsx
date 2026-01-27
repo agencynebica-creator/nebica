@@ -1,13 +1,8 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import { useState } from 'react';
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title:"FAQs - Frequently Asked Questions",
-  description:"Find answers to common questions about hiring remote talent from Nepal, our process, pricing, and support."
+import SeoHead from '@/components/seohead';
 
-}
  
 
 
@@ -58,7 +53,11 @@ export default function FAQs() {
   ];
 
   return (
-    <Page>
+    <Page head={ 
+      <SeoHead
+        title ="FAQs - Frequently Asked Questions"
+        description ="Find answers to common questions about hiring remote talent from Nepal, our process, pricing, and support."
+      />}>
       <div  className="bg-white">
         <div  className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

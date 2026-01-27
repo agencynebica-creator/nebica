@@ -1,14 +1,8 @@
 import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
+import SeoHead from '@/components/seohead';
 
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-
-  title:"Case Studies – Remote Hiring Success & Lessons",
-        description:"Explore real-world case studies on remote hiring risks, their consequences, and how managed staffing solutions resolve them."
-     }
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -51,12 +45,12 @@ export default function CaseStudies() {
   ];
 
   return (
-    <Page>
+    <Page head={
+      <SeoHead    title ="Case Studies – Remote Hiring Success & Lessons" description ="Explore real-world case studies on remote hiring risks, their consequences, and how managed staffing solutions resolve them." />}>
     
 
       <div  className="bg-white">
         <div  className="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          
           {/* Page Header */}
           <div  className="text-center mb-16">
             <h1  className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

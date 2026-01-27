@@ -4,7 +4,6 @@ import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import type { Engine } from 'tsparticles-engine';
 import { loadFull } from 'tsparticles';
-import Arrow from '@/constants/svg/arrow.svg'
 
 
 // Particle background component
@@ -79,12 +78,12 @@ const CasesSection = () => (
       <div  className="absolute left-0 top-0 h-screen w-full overflow-hidden">
         <ParticleBg />
       </div>
-      <div  className="max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40">
+      <div  className="max-w-7xl mx-4 lg:mx-auto pt-10 lg:pt-14">
         <h1  className="text-white text-4xl lg:text-6xl font-bold text-center">Success Stories</h1>
         <p  className="text-white text-gray-400 text-center text-xl mt-12">
           Discover how global companies have scaled their teams with exceptional Nepali talent
         </p>
-        <div  className="mx-auto pt-24">
+        <div  className="mx-auto pt-14">
           <div  className="w-full flex flex-wrap justify-around">
             {articles.map((article) => (
               <div
@@ -107,13 +106,6 @@ const CasesSection = () => (
                 </div>
               </div>
             ))}
-            <span
-               className="-mt-8 pb-12 lg:mt-4 flex items-center text-xl
-                 text-indigo-400 cursor-pointer z-30 hover:text-indigo-600"
-            >
-              View all success stories
-              <Arrow  className="h-6 w-6 fill-current ml-2" />
-            </span>
           </div>
         </div>
       </div>

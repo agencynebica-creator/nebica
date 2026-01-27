@@ -2,13 +2,9 @@ import Page from '@/components/page';
 import Footer from '@/components/footer';
  import Button from '@/components/button';
 import Check from '@/constants/svg/check.svg';
-import type { Metadata } from 'next'
+import SeoHead from '@/components/seohead';
  
-export const metadata: Metadata = {
-  title:"Pricing - Flexible Plans for Every Business",
-   description:"Transparent, custom pricing plans designed to scale with your business needs. Contact us for a tailored quote." 
 
-}
 
 export default function Pricing() {
   const plans = [
@@ -62,7 +58,11 @@ export default function Pricing() {
   ];
 
   return (
-    <Page>
+    <Page head={<SeoHead
+      title="Pricing - Flexible Plans for Every Business"
+       description="Transparent, custom pricing plans designed to scale with your business needs. Contact us for a tailored quote." 
+    
+    />}>
       <div  className="bg-white">
         <div  className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-16">

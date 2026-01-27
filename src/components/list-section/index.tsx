@@ -22,9 +22,13 @@ const ListSection = () => (
     backgroundAttachment: 'fixed',
   }}>
     <div  className="max-w-7xl mx-auto p-4 sm:p-4 lg:p-0">
-      <div  className="mb-4 text-center">
-        <p  className="mt-2 pb-4 text-4xl lg:text-5xl font-bold tracking-tight text-indigo-500">
-          Hire the best from Nepal
+    <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+          <span className="text-slate-900">Hire the best </span>
+          <span className="bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent">from Nepal</span>
+        </h2>
+        <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          Discover elite professionals across diverse fields, verified for excellence and ready to drive your success
         </p>
       </div>
       <div  className="flex flex-wrap -mx-8 items-center">
