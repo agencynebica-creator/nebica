@@ -51,8 +51,8 @@ export default function WhyNepal() {
   ];
 
   const stats = [
-    { label: 'English Speakers', value: '90%+' },
-    { label: 'University Graduates', value: 'High %' },
+    { label: 'Remote-Ready Professionals', value: '90%+' },
+        { label: 'University Graduates', value: 'Majority' },
     { label: 'Cost Savings', value: '40-60%' },
     { label: 'Satisfaction Rate', value: '98%' },
   ];
