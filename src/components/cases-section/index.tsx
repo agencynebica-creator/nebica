@@ -78,9 +78,9 @@ const CasesSection = () => (
       <div  className="absolute left-0 top-0 h-screen w-full overflow-hidden">
         <ParticleBg />
       </div>
-      <div  className="max-w-7xl mx-4 lg:mx-auto pt-10 lg:pt-14">
-        <h1  className="text-white text-4xl lg:text-6xl font-bold text-center">Success Stories</h1>
-        <p  className="text-white text-gray-400 text-center text-xl mt-12">
+      <div  className="max-w-7xl mx-4 lg:mx-auto pt-7 lg:pt-10">
+        <h1  className="text-white text-4xl lg:text-6xl font-bold text-center">Case Studies</h1>
+        <p  className="text-white text-gray-400 text-center text-xl mt-4">
           Discover how global companies have scaled their teams with exceptional Nepali talent
         </p>
         <div  className="mx-auto pt-14">
