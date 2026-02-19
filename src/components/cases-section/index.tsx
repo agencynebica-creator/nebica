@@ -57,7 +57,7 @@ const ParticleBg = () => {
 const articles = [
   {
     title: `Tech startup scales development team with 5 Nepali engineers, reducing costs by 40% while maintaining quality.`,
-    image: `/images/case-1.webp`,
+    image: `/images/case-10.webp`,
     alt: `Tech startup success story`,
   },
   {
