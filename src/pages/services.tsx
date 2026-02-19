@@ -88,7 +88,7 @@ export default function Services() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-transparent to-transparent group-hover:via-[#60cacc] group-hover:to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 
                 {/* Icon with gradient background */}
-                  <div className="text-3xl">{service.icon}</div>
+                  {/* <div className="text-3xl">{service.icon}</div> */}
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1b4b8d] transition-colors">
                   {service.title}
