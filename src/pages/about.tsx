@@ -126,9 +126,9 @@ export default function About() {
                     className="group relative bg-white rounded-xl p-6 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-[#60cacc]/40 transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className="text-center">
-                      <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r from-[#60cacc]/10 to-[#1b4b8d]/10 border border-[#60cacc]/20">
+                      {/* <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r from-[#60cacc]/10 to-[#1b4b8d]/10 border border-[#60cacc]/20">
                         <div className="text-2xl">{value.icon}</div>
-                      </div>
+                      </div> */}
                       
                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1b4b8d] transition-colors">
                         {value.title}

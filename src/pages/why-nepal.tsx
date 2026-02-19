@@ -108,9 +108,9 @@ export default function WhyNepal() {
                 className="group relative bg-white rounded-xl p-6 border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-[#60cacc]/40 transition-all duration-300"
               >
                 {/* Icon Container */}
-                <div className="mb-4 p-3 inline-flex items-center justify-center rounded-lg bg-[#60cacc]/10 border border-[#60cacc]/20">
+                {/* <div className="mb-4 p-3 inline-flex items-center justify-center rounded-lg bg-[#60cacc]/10 border border-[#60cacc]/20">
                   <div className="text-3xl">{reason.icon}</div>
-                </div>
+                </div> */}
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1b4b8d] transition-colors">
                   {reason.title}

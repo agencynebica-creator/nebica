@@ -17,10 +17,17 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* Analytics */}
-          <script
-            async
-            src="https://scripts.simpleanalyticscdn.com/latest.js"
-          />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=	G-E7FCYWK4NF"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '	G-E7FCYWK4NF');
+    `,
+          }}
+        />
         </Head>
         <body>
           <Main />
