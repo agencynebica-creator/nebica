@@ -72,7 +72,7 @@ export default function ForTalents() {
           <div  className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {benefits.map((benefit, index) => (
               <div key={index}  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <div  className="text-4xl mb-4">{benefit.icon}</div>
+                {/* <div  className="text-4xl mb-4">{benefit.icon}</div> */}
                 <h3  className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p  className="text-gray-600">{benefit.description}</p>
               </div>
@@ -86,8 +86,8 @@ export default function ForTalents() {
                 <div  className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
                   1
                 </div>
-                <h3  className="text-lg font-bold text-gray-900 mb-2">Register</h3>
-                <p  className="text-gray-600">Create your profile and showcase your skills and experience</p>
+                <h3  className="text-lg font-bold text-gray-900 mb-2">Contact Us</h3>
+                <p  className="text-gray-600">Mail us at <a href="mailto:hr@nebica.com" className="text-[#60cacc] hover:text-[#1b4b8d]">hr@nebica.com</a></p>
               </div>
               <div  className="text-center">
                 <div  className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
@@ -106,11 +106,11 @@ export default function ForTalents() {
             </div>
           </div>
 
-          <div  className="bg-indigo-50 rounded-lg p-8 text-center">
+          {/* <div  className="bg-indigo-50 rounded-lg p-8 text-center">
             <h2  className="text-2xl font-bold text-gray-900 mb-4">Ready to Join Our Talent Network?</h2>
             <p  className="text-gray-600 mb-6">Register today and start connecting with global opportunities</p>
             <Button primary>Register as Talent</Button>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />
