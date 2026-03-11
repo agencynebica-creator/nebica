@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Button from '@/components/button';
+import Link from 'next/link';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -41,7 +42,7 @@ const secondaryLinks = [
 
 const MobileMenu = ({ isHomepage }: { isHomepage: boolean }) => (
   <div 
-    className="md:hidden"
+    className="md:hidden lg:hidden"
     style={{
       backgroundColor: isHomepage ? 'transparent' : '#ffffff',
       backdropFilter: isHomepage ? 'blur(10px)' : 'none',
@@ -50,34 +51,31 @@ const MobileMenu = ({ isHomepage }: { isHomepage: boolean }) => (
   >
     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       {links.map((link: Link) => (
-        <a 
-          href={link.href} 
+        <Link href={link.href} 
           className="block px-3 py-3 text-base font-medium transition-colors hover:bg-white/10 rounded-md" 
           style={{ color: isHomepage ? '#ffffff' : '#374151' }}
           key={link.label}
         >
           {link.label}
-        </a>
+        </Link>
       ))}
     </div>
     <div className="pt-4 pb-3 px-3 border-t" style={{ borderTopColor: isHomepage ? 'rgba(255, 255, 255, 0.2)' : '#e5e7eb' }}>
       <div className="space-y-1">
-        <a
-          href="/resources"
+        <Link href="/resources"
           className="block px-3 py-3 text-base font-medium transition-colors hover:bg-white/10 rounded-md"
           style={{ color: isHomepage ? '#ffffff' : '#374151' }}
         >
           Resources
-        </a>
+        </Link>
         {secondaryLinks.map((link: Link) => (
-          <a
+          <Link href={link.href}
             key={`mobile-${link.label}`}
-            href={link.href}
              className="block px-3 py-2 text-base font-medium transition-colors"
             style={{ color: isHomepage ? '#ffffff' : '#374151' }}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
@@ -92,7 +90,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className="transition-all duration-300 z-50"
+      className=" w-full transition-all duration-300 z-50"
       style={{
         position: isHomepage ? 'absolute' : 'sticky',
         top: 0,
@@ -110,7 +108,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/">
+              <Link href="/">
                 <img 
                   className="h-12" 
                   src={isHomepage ? "logo-light.png": "logo.png"} 
@@ -123,21 +121,20 @@ const Navigation = () => {
                       : 'none',
                   }}
                 />
-              </a>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {links.map((link: Link) => (
-                  <a
+                  <Link href={link.href}
                     key={link.label}
-                    href={link.href}
                     className="px-4 py-2 rounded-md font-medium transition-colors hover:text-[#1b4b8d]"
                     style={{
                       color: isHomepage ? '#ffffff' : '#374151',
                     }}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <a
                   href="/resources"
@@ -153,7 +150,7 @@ const Navigation = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6 space-x-3">
-              <a href="/why-nepal">
+              <Link href="/why-nepal">
                 <button 
                   className="px-4 py-2 rounded-lg font-medium transition-all border border-transparent hover:border-[#60cacc]/40"
                   style={{
@@ -164,8 +161,8 @@ const Navigation = () => {
                 >
                   Why Nepal?
                 </button>
-              </a>
-              <a href="/contact">
+              </Link>
+              <Link href="/contact">
                 <button 
                   className="px-6 py-2.5 rounded-lg font-medium transition-all hover:shadow-md"
                   style={{
@@ -174,7 +171,7 @@ const Navigation = () => {
                 >
                   Start Hiring
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -188,7 +185,6 @@ const Navigation = () => {
                 color: isHomepage ? '#ffffff' : '#374151',
               }}
             >
-              <span className="sr-only">Open menu</span>
               {showMenu ? (
                 <svg
                   className="h-6 w-6"
