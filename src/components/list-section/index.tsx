@@ -31,36 +31,45 @@ const ListSection = () => (
       </p>
     </div>
 
-    <div className="flex flex-wrap items-center gap-12">
+    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-      <div className="w-full lg:w-1/2">
-        <ul className="space-y-12">
-          {listItems.map((item, index) => (
-            <li className="flex gap-6" key={item.title}>
-              
-              <span className="flex w-16 h-16 items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
-                {index + 1}
-              </span>
+  {/* LEFT CONTENT */}
+  <div className="w-full lg:w-1/2">
+    <ul className="space-y-10">
+      {listItems.map((item, index) => (
+        <li
+          key={item.title}
+          className="flex items-start gap-5 group"
+        >
+          {/* Number */}
+          <span className="flex w-14 h-14 shrink-0 items-center justify-center text-lg font-semibold rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-400 group-hover:text-white transition">
+            {index + 1}
+          </span>
 
-              <div>
-                <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
-                <p className="text-gray-500 leading-loose">{item.description}</p>
-              </div>
+          {/* Text */}
+          <div>
+            <h3 className="mb-1 text-lg lg:text-xl font-semibold text-gray-900">
+              {item.title}
+            </h3>
+            <p className="text-gray-500 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
 
-            </li>
-          ))}
-        </ul>
-      </div>
+  {/* RIGHT IMAGE */}
+  <div className=" hidden md:flex w-full lg:w-1/2 flex justify-center">
+    <img
+      src="/team.png"
+      alt="Nebica - Hire the best professionals from Nepal"
+      className="w-full max-w-md lg:max-w-full rounded-2xl shadow-2xl object-cover"
+    />
+  </div>
 
-      <div className="w-full lg:w-1/2">
-        <img
-          src="/team.jpg"
-          alt="Professional team collaboration"
-          className="w-full rounded-lg shadow-xl"
-        />
-      </div>
-
-    </div>
+</div>
   </div>
 </section>
 );
