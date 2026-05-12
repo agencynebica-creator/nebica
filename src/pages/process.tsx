@@ -126,19 +126,19 @@ export default function Process() {
               {/* Stats */}
               <div className="flex flex-wrap justify-center gap-8 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent">
+                  <div className="text-3xl font-bold">
                     6 Steps
                   </div>
                   <div className="text-sm text-gray-600">Simple Process</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent">
+                  <div className="text-3xl font-bold ">
                     Under 2 Weeks
                   </div>
                   <div className="text-sm text-gray-600">Total Time</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent">
+                  <div className="text-3xl font-bold ">
                     98% Success
                   </div>
                   <div className="text-sm text-gray-600">Guarantee</div>

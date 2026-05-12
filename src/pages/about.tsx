@@ -95,9 +95,9 @@ export default function About() {
                 >
                   <div className="relative">
                     {/* Gradient background effect */}
-                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                    {/* <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} /> */}
                     
-                    <div className={`text-4xl font-bold bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent mb-2`}>
+                    <div className={`text-4xl font-bold`}>
                       {stat.number}
                     </div>
                     <div className="text-gray-700 font-medium">

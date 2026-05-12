@@ -110,24 +110,25 @@ export default function Services() {
             </h2>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="group text-center p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent mb-2">
+              <div className="group text-center p-4 rounded-lg bg-white transition-all duration-300">
+                <div className="text-4xl font-bold  mb-2">
                   98%
                 </div>
                 <p className="text-gray-700 font-medium">Success Rate</p>
                 <div className="mt-2 h-1 w-12 mx-auto bg-gradient-to-r from-[#60cacc] to-[#1b4b8d] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               
-              <div className="group text-center p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent mb-2">
+              <div className="group text-center p-4 rounded-lg bg-white transition-all duration-300">
+                <div className="text-4xl font-bold 
+                 mb-2">
                   7 days
                 </div>
                 <p className="text-gray-700 font-medium">Average Time to Hire</p>
                 <div className="mt-2 h-1 w-12 mx-auto bg-gradient-to-r from-[#60cacc] to-[#1b4b8d] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               
-              <div className="group text-center p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#1b4b8d] to-[#60cacc] bg-clip-text text-transparent mb-2">
+              <div className="group text-center p-4 rounded-lg bg-white transition-all duration-300">
+                <div className="text-4xl font-bold  mb-2">
                   24/7
                 </div>
                 <p className="text-gray-700 font-medium">Support Available</p>
