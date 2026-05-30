@@ -105,10 +105,10 @@ export default function TalentPool() {
             
             {/* Content */}
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#60cacc]/30">
+              {/* <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#60cacc]/30">
                 <div className="w-2 h-2 rounded-full bg-[#60cacc]" />
                 <span className="text-sm font-semibold text-[#1b4b8d]">Custom Matching</span>
-              </div>
+              </div> */}
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Can't find what you're looking for?

@@ -91,7 +91,7 @@ export default function WhyNepal() {
                 key={index} 
                 className="group text-center p-6 bg-white rounded-xl border border-gray-200/80 shadow-sm hover:shadow-md hover:border-[#60cacc]/40 transition-all duration-300"
               >
-                <div className="text-3xl font-bold text-[#1b4b8d] mb-2">
+                <div className="text-3xl font-bold  mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-700 font-medium">
