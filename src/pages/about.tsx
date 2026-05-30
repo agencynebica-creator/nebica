@@ -111,10 +111,10 @@ export default function About() {
             {/* Enhanced Values Section */}
             <div className="mb-16">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-[#60cacc]/10 to-[#1b4b8d]/10 border border-[#60cacc]/20">
+                {/* <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-[#60cacc]/10 to-[#1b4b8d]/10 border border-[#60cacc]/20">
                   <div className="w-2 h-2 rounded-full bg-[#60cacc]" />
                   <span className="text-sm font-semibold text-[#1b4b8d]">What We Stand For</span>
-                </div>
+                </div> */}
                 
                 <h2 className="text-3xl font-bold text-gray-900">Our Values</h2>
               </div>
