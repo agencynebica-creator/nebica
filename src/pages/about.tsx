@@ -87,7 +87,7 @@ export default function About() {
             </div>
 
             {/* Enhanced Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
@@ -97,16 +97,16 @@ export default function About() {
                     {/* Gradient background effect */}
                     {/* <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} /> */}
                     
-                    <div className={`text-4xl font-bold`}>
+                    {/* <div className={`text-4xl font-bold`}>
                       {stat.number}
                     </div>
                     <div className="text-gray-700 font-medium">
                       {stat.label}
                     </div>
                   </div>
-                </div>
+                </div> 
               ))}
-            </div>
+            </div> */}
 
             {/* Enhanced Values Section */}
             <div className="mb-16">
