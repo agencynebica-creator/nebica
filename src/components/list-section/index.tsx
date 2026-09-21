@@ -10,7 +10,7 @@ const listItems = [
   },
   {
     title: `Business & Operations`,
-    description: `Connect with experienced project managers, business analysts, digital marketers, and virtual assistants. Build your operational team with professionals who understand global business dynamics.`,
+    description: `Connect with experienced project managers, business analysts, digital marketing experts, and virtual assistants. Build your operational team with professionals who understand global business dynamics.`,
   },
 ];
 
